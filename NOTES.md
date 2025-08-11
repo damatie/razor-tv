@@ -11,14 +11,15 @@ The project was broken down into the following tasks with estimated completion t
 | Scaffold Next.js, TypeScript, and Tailwind CSS       | 1 hr           |
 | Set up React Query for data fetching                 | 1 hr           |
 | Create OMDb API proxy routes (search & details)      | 3 hrs          |
+| Server-Side Validation with Zod                      | 1 hr           |
 | Build Home, Search, and Movie Detail pages           | 5 hrs          |
 | Implement client-side reviews with `localStorage`    | 2 hrs          |
 | Polish UI for Hero Carousel and Collection Rows      | 2 hrs          |
-| Implement logic for "Latest" collections             | 1.5 hrs        |
-| Refine Search UX (debounce, min-length, empty state) | 1 hr           |
+| Implement logic for "Latest" collections             | 2 hrs          |
+| Refine Search UX (debounce, min-length, empty state) | 2 hr           |
 | Unit Testing                                         | 2 hrs          |
-| Finalize README and technical notes                  | 0.5 hrs        |
-| **Total Estimated Time**                             | **~21 hours**  |
+| Finalize README and technical notes                  | 1 hr           |
+| **Total Estimated Time**                             | **~24 hours**  |
 
 ### Retrospective
 
@@ -70,6 +71,7 @@ The application follows a modern React architecture, emphasizing component compo
 
   - **API Key Protection:** The OMDb API key is stored in an environment variable and used only in server-side API routes (`app/api/omdb/*`). This prevents the key from being exposed to the client.
   - **Input Sanitization:** All user-generated content (review author, review text, and search queries) is sanitized using the functions in `lib/sanitize.ts` to remove potentially harmful characters and prevent cross-site scripting (XSS) attacks.
+  - **Server-Side Validation:** The API routes use `zod` to validate and sanitize all incoming query parameters. This provides a strong layer of protection against invalid or malicious data being sent to the OMDb API.
 
 - **Accessibility:**
 
