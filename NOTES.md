@@ -69,6 +69,7 @@ The application follows a modern React architecture, emphasizing component compo
 - **Security:**
 
   - **API Key Protection:** The OMDb API key is stored in an environment variable and used only in server-side API routes (`app/api/omdb/*`). This prevents the key from being exposed to the client.
+  - **Input Sanitization:** All user-generated content (review author, review text, and search queries) is sanitized using the functions in `lib/sanitize.ts` to remove potentially harmful characters and prevent cross-site scripting (XSS) attacks.
 
 - **Accessibility:**
 
