@@ -1,6 +1,6 @@
-# CineScope: A Modern Movie Search Application
+# RazorTV: A Modern Movie Search Application
 
-CineScope is a responsive web application that allows users to search for movies, view detailed information, and manage reviews. It's built with modern web technologies and designed for a seamless user experience.
+RazorTV is a responsive web application that allows users to search for movies, view detailed information, and manage reviews. It's built with modern web technologies and designed for a seamless user experience.
 
 ## Features
 
@@ -35,7 +35,7 @@ CineScope is a responsive web application that allows users to search for movies
 
     ```bash
     git clone <repository-url>
-    cd cinescope
+    cd razortv
     ```
 
 2.  **Install dependencies:**

@@ -1,6 +1,6 @@
 # Technical Notes & Architectural Overview
 
-This document provides an in-depth look at the planning, architecture, and technical decisions made during the development of the CineScope application.
+This document provides an in-depth look at the planning, architecture, and technical decisions made during the development of the RazorTV application.
 
 ## 1. Plan of Attack & Time Estimation
 
@@ -69,6 +69,10 @@ The application follows a modern React architecture, emphasizing component compo
   - **API Key Protection:** The OMDb API key is stored in an environment variable and used only in server-side API routes (`app/api/omdb/*`). This prevents the key from being exposed to the client.
 
 - **Accessibility:**
+
   - Semantic HTML is used where appropriate.
   - Form inputs have `aria-label` attributes for screen readers.
   - Focus rings are styled for better keyboard navigation.
+
+- **Testing:**
+  - **`vitest.config.ts` TypeScript Error:** There is a known issue with how some editors' TypeScript language servers interact with Vite projects, which can cause a "Cannot find module" error for `@vitejs/plugin-react` in `vitest.config.ts`. This error does not affect the test execution, and all tests pass successfully.
