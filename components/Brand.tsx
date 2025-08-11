@@ -1,1 +1,13 @@
-import Link from 'next/link'; export default function Brand(){return(<Link href='/' className='inline-flex items-center gap-2 focus-ring'><div className='h-7 w-7 rounded-md bg-gradient-to-tr from-brand-primary/90 to-white/40'/><span className='text-xl font-semibold tracking-tight'>CineScope</span></Link>);}
+import Link from "next/link";
+export default function Brand() {
+  return (
+    <Link href="/" className="inline-flex items-center gap-2 focus-ring">
+      <div
+        className="h-7 w-7 rounded-md bg-gradient-to-tr from-brand-primary/90 to-white/40"
+        role="img"
+        aria-label="RazorTV logo"
+      />
+      <span className="text-xl font-semibold tracking-tight">RazorTV</span>
+    </Link>
+  );
+}
