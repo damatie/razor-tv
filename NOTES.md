@@ -42,6 +42,7 @@ The application follows a modern React architecture, emphasizing component compo
 
   - **`app/`**: Pages and layouts are defined here, following the Next.js App Router paradigm.
   - **`components/`**: Contains reusable UI components. These are further organized into subdirectories based on their context (e.g., `components/home`, `components/movie`).
+    - **`components/ui`**: Generic, reusable UI components (e.g., `Input`, `Select`, `Textarea`).
   - **`hooks/`**: Custom hooks encapsulate data fetching and other complex logic, making components cleaner and more focused on rendering.
   - **`lib/`**: Contains shared utilities, type definitions, and business logic (like the review store).
 

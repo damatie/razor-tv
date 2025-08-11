@@ -3,6 +3,8 @@ import Brand from "./Brand";
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { debounce } from "@/lib/utils";
+import { sanitizeText } from "@/lib/sanitize";
+import Input from "./ui/Input";
 
 /**
  * The main navigation bar for the application.
@@ -18,7 +20,7 @@ export default function NavBar() {
   // Debounced function to push search query to router
   const push = useCallback(
     debounce((value: string) => {
-      const val = value.trim();
+      const val = sanitizeText(value, 100).trim();
       if (val.length >= 1) {
         const s = new URLSearchParams({ q: val, page: "1" });
         router.push(`/search?${s.toString()}`);
@@ -38,7 +40,7 @@ export default function NavBar() {
         <Brand />
         <div className="flex-1" />
         <div className="relative w-full max-w-md">
-          <input
+          <Input
             ref={inputRef}
             value={q}
             onChange={(e) => {
@@ -46,7 +48,6 @@ export default function NavBar() {
               push(e.target.value);
             }}
             placeholder="Search movies..."
-            className="w-full rounded-xl bg-brand-soft/80 px-4 py-2 text-sm focus-ring placeholder:text-brand-sub/70"
             aria-label="Search movies"
           />
         </div>

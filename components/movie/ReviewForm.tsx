@@ -3,6 +3,9 @@ import { addReview } from "@/lib/reviews-store";
 import type { Review } from "@/lib/types";
 import { useRef, useState } from "react";
 import { sanitizeName, sanitizeText, clampRating } from "@/lib/sanitize";
+import Input from "../ui/Input";
+import Select from "../ui/Select";
+import Textarea from "../ui/Textarea";
 
 /**
  * A form for submitting a new movie review.
@@ -50,15 +53,13 @@ export default function ReviewForm({
       className="bg-brand-soft/60 p-4 rounded-xl space-y-3"
     >
       <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-        <input
-          className="rounded-lg bg-black/40 px-3 py-2 text-sm focus-ring"
+        <Input
           placeholder="Your name (optional)"
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
           maxLength={64}
         />
-        <select
-          className="rounded-lg bg-black/40 px-3 py-2 text-sm focus-ring"
+        <Select
           value={rating}
           onChange={(e) => setRating(parseInt(e.target.value))}
         >
@@ -67,10 +68,9 @@ export default function ReviewForm({
               {n} / 5
             </option>
           ))}
-        </select>
+        </Select>
       </div>
-      <textarea
-        className="w-full rounded-lg bg-black/40 px-3 py-2 text-sm focus-ring"
+      <Textarea
         placeholder="Share your thoughts..."
         rows={3}
         value={text}

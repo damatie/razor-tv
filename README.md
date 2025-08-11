@@ -70,5 +70,6 @@ The codebase is organized into the following main directories:
 
 - `app/`: Contains the application's pages and API routes, following the Next.js App Router structure.
 - `components/`: Reusable React components used throughout the application.
+  - `components/ui`: Generic, reusable UI components (e.g., `Input`, `Select`, `Textarea`).
 - `hooks/`: Custom React hooks for data fetching and other logic.
 - `lib/`: Utility functions, type definitions, and client-side storage management.
