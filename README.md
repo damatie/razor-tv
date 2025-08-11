@@ -45,13 +45,13 @@ RazorTV is a responsive web application that allows users to search for movies, 
     ```
 
 3.  **Set up environment variables:**
-    Create a `.env.local` file in the root of the project by copying the example file:
+    Create a `.env` file in the root of the project by copying the example file:
 
     ```bash
-    cp .env.example .env.local
+    cp .env.example .env
     ```
 
-    Open `.env.local` and add your OMDb API key:
+    Open `.env` and add your OMDb API key:
 
     ```
     OMDB_API_KEY=your_api_key_here
