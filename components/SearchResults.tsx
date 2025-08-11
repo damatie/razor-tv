@@ -31,7 +31,7 @@ export default function SearchResults() {
   if (isLoading) return <GridSkeleton />;
   if (isError || data?.Response === "False")
     return (
-      <section className="mx-auto max-w-7xl px-4 pb-16">
+      <section className="mx-auto max-w-7xl mt-8 px-4 pb-16">
         <p className="text-brand-sub">No results found. Try another title.</p>
       </section>
     );
