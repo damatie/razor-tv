@@ -41,7 +41,7 @@ CineScope is a responsive web application that allows users to search for movies
 2.  **Install dependencies:**
 
     ```bash
-    pnpm install
+    npm install
     ```
 
 3.  **Set up environment variables:**
@@ -59,7 +59,7 @@ CineScope is a responsive web application that allows users to search for movies
 
 4.  **Run the development server:**
     ```bash
-    pnpm dev
+    npm dev
     ```
 
 The application will be available at `http://localhost:3000`.

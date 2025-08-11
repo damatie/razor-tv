@@ -1,4 +1,4 @@
-import { render, screen, fireEvent, act } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import NavBar from "../NavBar";
 
@@ -19,10 +19,8 @@ describe("NavBar", () => {
     searchParams.delete("q");
   });
 
-  it("renders the Brand component and search input", async () => {
-    await act(async () => {
-      render(<NavBar />);
-    });
+  it("renders the Brand component and search input", () => {
+    render(<NavBar />);
 
     const brand = screen.getByRole("link", { name: /razortv/i });
     expect(brand).toBeInTheDocument();
@@ -32,10 +30,8 @@ describe("NavBar", () => {
     expect(searchInput).toHaveValue("");
   });
 
-  it("updates the search input value when the user types", async () => {
-    await act(async () => {
-      render(<NavBar />);
-    });
+  it("updates the search input value when the user types", () => {
+    render(<NavBar />);
 
     const searchInput = screen.getByPlaceholderText("Search movies...");
     fireEvent.change(searchInput, { target: { value: "Inception" } });
@@ -43,9 +39,7 @@ describe("NavBar", () => {
   });
 
   it("calls the debounced push function with the correct query", async () => {
-    await act(async () => {
-      render(<NavBar />);
-    });
+    render(<NavBar />);
 
     const searchInput = screen.getByPlaceholderText("Search movies...");
     fireEvent.change(searchInput, { target: { value: "Inception" } });
@@ -56,11 +50,9 @@ describe("NavBar", () => {
     expect(mockRouter.push).toHaveBeenCalledWith("/search?q=Inception&page=1");
   });
 
-  it("initializes with the query from search params", async () => {
+  it("initializes with the query from search params", () => {
     searchParams.set("q", "The Matrix");
-    await act(async () => {
-      render(<NavBar />);
-    });
+    render(<NavBar />);
     const searchInput = screen.getByPlaceholderText("Search movies...");
     expect(searchInput).toHaveValue("The Matrix");
   });
