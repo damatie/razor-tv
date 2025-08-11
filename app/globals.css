@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root { color-scheme: dark; }
+body { @apply bg-brand-bg text-brand-text antialiased; }
+.focus-ring { @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-2 focus-visible:ring-offset-brand-bg; }
+.skeleton { @apply relative overflow-hidden rounded-md bg-brand-soft; }
+.skeleton::after { content: ""; @apply absolute inset-0; background: linear-gradient(90deg, transparent, rgba(255,255,255,.06), transparent); background-size: 200% 100%; animation: shimmer 2s linear infinite; }
