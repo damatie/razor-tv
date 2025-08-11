@@ -76,4 +76,5 @@ The application follows a modern React architecture, emphasizing component compo
   - Focus rings are styled for better keyboard navigation.
 
 - **Testing:**
+  - **Test Location:** All tests are located in `components/__tests__`.
   - **`vitest.config.ts` TypeScript Error:** There is a known issue with how some editors' TypeScript language servers interact with Vite projects, which can cause a "Cannot find module" error for `@vitejs/plugin-react` in `vitest.config.ts`. This error does not affect the test execution, and all tests pass successfully.
