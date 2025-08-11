@@ -7,17 +7,18 @@ This document provides an in-depth look at the planning, architecture, and techn
 The project was broken down into the following tasks with estimated completion times.
 
 | Task                                                 | Estimated Time |
-| ---------------------------------------------------- | :------------: |
-| Scaffold Next.js, TypeScript, and Tailwind CSS       |      1 hr      |
-| Set up React Query for data fetching                 |      1 hr      |
-| Create OMDb API proxy routes (search & details)      |     3 hrs      |
-| Build Home, Search, and Movie Detail pages           |     5 hrs      |
-| Implement client-side reviews with `localStorage`    |     2 hrs      |
-| Polish UI for Hero Carousel and Collection Rows      |     2 hrs      |
-| Implement logic for "Latest" collections             |    1.5 hrs     |
-| Refine Search UX (debounce, min-length, empty state) |      1 hr      |
-| Finalize README and technical notes                  |    0.5 hrs     |
-| **Total Estimated Time**                             | **~17 hours**  |
+| ---------------------------------------------------- | -------------- |
+| Scaffold Next.js, TypeScript, and Tailwind CSS       | 1 hr           |
+| Set up React Query for data fetching                 | 1 hr           |
+| Create OMDb API proxy routes (search & details)      | 3 hrs          |
+| Build Home, Search, and Movie Detail pages           | 5 hrs          |
+| Implement client-side reviews with `localStorage`    | 2 hrs          |
+| Polish UI for Hero Carousel and Collection Rows      | 2 hrs          |
+| Implement logic for "Latest" collections             | 1.5 hrs        |
+| Refine Search UX (debounce, min-length, empty state) | 1 hr           |
+| Unit Testing                                         | 2 hrs          |
+| Finalize README and technical notes                  | 0.5 hrs        |
+| **Total Estimated Time**                             | **~21 hours**  |
 
 ### Retrospective
 
